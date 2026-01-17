@@ -1,8 +1,7 @@
-네, 기억나시는 그 논문(주로 알리바바나 학계의 Censored Regression 관련 연구)에서 사용한 Loss Function은 일반적인 MSE(평균제곱오차)가 아닙니다.
+
 
 핵심은 **"이겼을 때와 졌을 때의 계산 방식이 다른, 이중적인(Dual) Loss Function"**을 사용한다는 점입니다. 이를 통계학 용어로는 **NLL (Negative Log-Likelihood)**이라고 합니다.
 
-데이터의 상태(Observed vs Censored)에 따라 Loss를 어떻게 설정했는지 단계별로 정리해 드릴게요.
 
 ---
 
@@ -75,8 +74,6 @@
 ---
 
 ### 요약
-
-질문하신 **"Loss 설정법"**은 다음과 같습니다.
 
 1. **목적:** Observed(승리) 데이터와 Censored(패배) 데이터를 동시에 학습시키기 위함.
 2. **방법:** **Negative Log-Likelihood (NLL)** 사용.
